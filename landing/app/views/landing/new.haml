@@ -1,0 +1,84 @@
+%html
+  %head
+    %title TrackR
+    = csrf_meta_tags
+    %meta{:content => "1578194986", :property => "twitter:account_id"}
+    %meta{content: "TrackR - Never lose anything again. A small device that helps me find any missing item. Sign up to get yours free!", name: "description"}
+    %meta{content: "TrackR, PhoneHalo, StickR TrackR", name: "keywords"}
+    %meta{content: "TrackR", name: "author"}
+    %meta{content: "I just signed up to get a FREE TrackR!", property: "og:title"}
+    %meta{content: "http://www.thetrackr.com/fb-share-trackr.png", property: "og:image"}
+    %meta{content: "http://www.TheTrackR.com/Giveaway", property: "og:url"}
+    %meta{content: "TrackR - Never lose anything again. A small device that helps me find any missing item. Sign up to get yours free!", property: "og:description"}
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic|Varela+Round'
+    = stylesheet_link_tag 'assets/css/bootstrap.css'
+    = stylesheet_link_tag 'application'
+    = favicon_link_tag 'favicon.png'
+    = favicon_link_tag 'favicon.png', rel: 'apple-touch-icon', type: 'image/png'
+    %body
+  
+      = yield
+    = javascript_include_tag 'application'
+    = javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'
+    .containe
+      %section#signup-top
+        .caption
+          %h1{style: "padding-bottom: 0px"} New Product Coming Soon!
+          .countdown
+            #clock
+        .freebie{style: "padding-bottom:20px;"}
+          %h3 Sign up to see it FIRST!
+
+          .call-to-action
+            .placeholder
+              %i.email
+              .error.email
+
+          .span-disclaimer
+            %small We'll never sell or spam your email. Scouts honour
+
+        .overlay-container
+          .hurry
+            %h4{style: "font-size: 1.5em;"} Hurry and see it!
+            %small{style: "font-size: 1.25em;"} You're almost there!
+        .secret_container
+        .secret_image
+
+      .scrollblock
+
+      %section#boarding-groups.text-center
+    %header
+      %h3 Be the first to see the new TrackR
+      %p Complete these tasks below to clear the image.
+      .row
+        .boarding-panel.col-sm-3
+          .icon.fb 
+          .header Share with your friends on facebook!
+          .details Reveal a clearer image of the new TrackR!
+          .group-info
+        .boarding-panel.col-sm-3
+          .icon.tw
+          .header Tweet this!
+          .details Make the image even clearer!
+          .group-info
+        .boarding-panel.col-sm-3
+          .icon.pin
+          .header Pin this on Pinterest!
+          .details You can almost see it!
+          .group-info
+        .boarding-panel.col-sm-3
+          .icon.referal
+          .header Invite some friends to see it too!
+          .details You're so close! Be the first to see it!
+          .group-info
+          
+
+      
+
+  = render 'twitterconversion'
+  = render 'facebookconversion'
+  = render 'googleconversion'
+
+  %section#copyright
+    2014 &copy; Phone Halo Inc - All Rights Reserved

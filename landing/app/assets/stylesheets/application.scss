@@ -1,0 +1,29 @@
+@import '_colours';
+@import 'typography';
+@import 'header';
+@import 'landing';
+@import 'shipping';
+@import 'bootstrap';
+
+
+html > body {
+  background-color: $background-grey;
+  font-family: $base-font-family;
+}
+
+.main-container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.error {
+  color: $error-red;
+  margin: 0;
+  padding: 0;
+}
+
+.success {
+  color: $green;
+  margin: 0;
+  padding: 0;
+}

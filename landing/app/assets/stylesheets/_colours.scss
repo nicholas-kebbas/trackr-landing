@@ -1,0 +1,26 @@
+$grey: #EEE;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$off-black: #262B31;
+$text-grey: #646C7E;
+$border-grey: #C6CED0;
+$background-grey: #D3DBDD;
+$recomend-grey: #F5F7F7;
+$copyright-grey: #8791A6;
+$stats-box-grey: #E3E7E8;
+
+$error-red: #A94442;
+$success-green: #DFF0D8;
+
+$text-light-green: #8DDFC9;
+$green: #71C198;
+$dark-green: #3D9A99;
+
+@mixin stats-box-gradient {
+  background: -webkit-linear-gradient($white, $stats-box-grey);
+  background: -o-linear-gradient($white, $stats-box-grey);
+  background: -moz-linear-gradient($white, $stats-box-grey);
+  background: linear-gradient($white, $stats-box-grey);
+}

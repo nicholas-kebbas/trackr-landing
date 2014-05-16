@@ -1,0 +1,51 @@
+$header-height: 58px;
+$small-font-size: 12px;
+
+nav.nav-menu {
+  border-bottom: 1px solid grey;
+  min-height: $header-height;
+  background-color: white;
+
+  .menu-container {
+    margin: 0 auto;
+    width: 960px;
+    background-color: white;
+
+    &.responsive {
+      @media screen and(max-width:480px) {
+        width: 100%;
+
+        li.nav-item > a {
+          font-size: 60%;
+          margin-right: 1em;
+        }
+      }
+    }
+
+    .logo {
+      margin: (($header-height - 40px) / 2) 0;
+    }
+
+    ul.nav-list {
+      margin: 0;
+      float: right;
+    }
+
+    li.nav-item, #orderstatus {
+      display: inline-block;
+      vertical-align: middle;
+
+      a {
+        font-size: $small-font-size;
+        color: grey;
+        text-transform: uppercase;
+        margin-right: 4em;
+        line-height: $header-height + 12px;
+      }
+
+      &:last-child a {
+        margin-right: 0;
+      }
+    }
+  }
+}

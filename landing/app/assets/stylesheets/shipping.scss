@@ -1,0 +1,192 @@
+/* font-size */
+$small-font-size: .75em;
+$h4-font-size: 1em;
+$bold-font-weight: 600;
+
+/* Colors */
+
+$grey: #EEE;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$off-black: #262B31;
+$text-grey: #646C7E;
+$border-grey: #C6CED0;
+$background-grey: #D3DBDD;
+$recomend-grey: #F5F7F7;
+$copyright-grey: #8791A6;
+$stats-box-grey: #E3E7E8;
+
+$error-red: #A94442;
+$success-green: #DFF0D8;
+
+$text-light-green: #8DDFC9;
+$green: #71C198;
+$dark-green: #3D9A99;
+
+
+#shipping-modal {
+  .modal-dialog {
+    width: 60%;
+    min-width: 550px;
+    position: static;
+
+
+    @media screen and(max-width:480px) {
+      width: auto;
+      margin: 0 auto;
+      min-width: 380px;
+      position: static;
+    }
+  }
+
+  .modal-body {
+    padding: 4em 8em;
+
+    @media screen and(max-width:480px) {
+      padding: 4em 2em;
+    }
+  }
+
+  .device-header {
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: $bold-font-weight;
+    font-size: $small-font-size;
+  }
+
+  .device-box {
+    padding: 2em;
+    background-color: $recomend-grey;
+
+    .device-select {
+      cursor: pointer;
+
+      input[type='radio'] {
+        display: none;
+      }
+
+      input[type='radio'] + label {
+        width: 100%;
+        height: 21px;
+        background: image-url('radio-deselected.png') center no-repeat;
+      }
+
+      input[type='radio']:checked + label {
+        width: 100%;
+        height: 21px;
+        background: image-url('radio-selected.png') center no-repeat;
+      }
+
+      label {
+        margin-top: 1em;
+      }
+
+      .device-label {
+        text-align: center;
+        color: $copyright-grey;
+      }
+    }
+
+    .icon {
+      margin: 0 auto;
+      min-height: 62px;
+      background-position: center;
+
+      &.apple {
+        width: 4em;
+        background: image-url('icon-apple.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.android {
+        width: 4em;
+        background: image-url('icon-android.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.other-phones {
+        width: 2.5em;
+        background: image-url('icon-other-phones.png') no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .error.device {
+      text-align: center;
+      margin: 1em 0;
+    }
+  }
+
+  form {
+    margin-top: 2em;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    label {
+      font-size: $small-font-size;
+      font-weight: $bold-font-weight;
+    }
+
+    input[type='text'] {
+      margin-bottom: 2em;
+      height: 45px;
+      font-size: 24px;
+    }
+
+    @media screen and(max-width:480px) {
+      .city, .state, .zip {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+
+    .btn-submit {
+      color: $white;
+      background-color: $green;
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+      border: 2px solid $green;
+      outline: none;      
+    }
+
+    .btn-submit:hover {
+      color: $green;
+      background-color: $white;    
+    }
+
+    .purchases {
+      input[type='checkbox'] {
+        display: inline-block;
+        width: 10%;
+        vertical-align: top;
+      }
+
+      label {
+        display: inline-block;
+        width: 85%;
+        vertical-align: top;
+        color: $copyright-grey;
+      }
+    }
+
+    .device-select {
+      select {
+        width: 100%;
+        padding: 0.2em 1.5em;
+        border: 1px solid #CCC;
+        background-color: $background-grey;
+        line-height: 2em;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent image-url('drop-arrow.png') no-repeat scroll 96% 0.9em;
+      }
+    }
+  }
+}
